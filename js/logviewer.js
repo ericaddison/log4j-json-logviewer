@@ -12,6 +12,7 @@ function addLogRow(logitem){
                 .text(logitem.level)
             )
             .append($('<td>')
+                .addClass('timecol')
                 .text((new Date(logitem.timeMillis)).toLocaleString())
             )
             .append($('<td>')
