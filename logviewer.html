@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Viewer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/logviewer.css">
+
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/Popper.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/logviewer.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><strong>Filters</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li id="tracefilter" class="active filter"><a>TRACE</a></li>
+      <li id="debugfilter" class="active filter"><a>DEBUG</a></li>
+      <li id="infofilter" class="active filter"><a>INFO</a></li>
+      <li id="warnfilter" class="active filter"><a>WARN</a></li>
+      <li id="errorfilter" class="active filter"><a>ERROR</a></li>
+      <li id="fatalfilter" class="active filter"><a>FATAL</a></li>
+      <li id="allfilter" class="filter"><a>ALL</a></li>
+    </ul>
+
+    <div class="col-md-12 mt-4">
+        <div class="md-form form-sm form-2 pl-0">
+            <input id="searchInput" class="form-control my-0 py-1 grey-border" type="text" placeholder="Search" aria-label="Search">
+        </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- with input that accepts one file -->
+<div id="fileinfodiv" class="alert alert-info">
+  <input id="the-file-input" type="file" style="margin: 5px 0 5px 10        px">
+</div>
+
+
+
+<table class="table" id="logtable">
+  <thead>
+    <tr>
+      <th class="levelcol">Level</th>
+      <th class="timecol">Time</th>
+      <th>Message</th>
+      <th>Class</th>
+      <th>Method</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+
+</body>
+</html>

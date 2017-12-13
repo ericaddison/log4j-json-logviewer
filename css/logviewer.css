@@ -1,0 +1,96 @@
+
+  #logtable {
+    border-collapse:separate;
+    border-spacing: 0px 6px;
+   }
+
+   #logtable>td, tr {
+    margin-top: 100px;
+   }
+
+  .levelcol {
+    width: 100px;
+  }
+
+  .timecol {
+    width: 200px;
+  }
+
+  .DEBUG {
+    background-color: #aaffaa;
+    text-align: center;
+  }
+
+  .DEBUGROW {
+    outline: 3px solid #aaffaa;
+  }
+
+  .INFO {
+    background-color: #bbbbbb;
+    text-align: center;
+  }
+
+  .INFOROW {
+    outline: 3px solid #bbbbbb;
+  }
+
+  .TRACE {
+    background-color: #aaaaff;
+    text-align: center;
+    border: 0px solid transparent;
+  }
+
+  .TRACEROW {
+    outline: 3px solid #aaaaff;
+  }
+
+  .WARN {
+    background-color: #ffaaaa;
+    text-align: center;
+  }
+
+  .WARNROW {
+    outline: 3px solid #ffaaaa;
+  }
+
+  .ERROR {
+    background-color: #ff5555;
+    text-align: center;
+  }
+
+  .ERRORROW {
+    outline: 3px solid #ff5555;
+  }
+
+  .FATAL {
+    background-color: #111111;
+    color: white;
+    text-align: center;
+  }
+
+  .FATALROW {
+    outline: 3px solid #111111;
+  }
+
+  .filter {
+    cursor: pointer;
+  }
+
+  .filtered {
+    display: none;
+  }
+
+  .nosearch {
+    display: none;
+  }
+
+  #searchInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin: 12px;
+}
