@@ -100,21 +100,21 @@
 
 /* WARN entry style */
   .WARN {
-    background-color: #dd9999;
+    background-color: #FFA500;
   }
 
   .WARNROW td {
-    border-top: 2px solid #aa6666;
-    border-bottom: 2px solid #aa6666;
+    border-top: 2px solid #FF8C00;
+    border-bottom: 2px solid #FF8C00;
   }
 
   .WARNROW td:first-child {
-      border-left: 2px solid #aa6666;
-      border-right: 2px solid #aa6666;
+      border-left: 2px solid #FF8C00;
+      border-right: 2px solid #FF8C00;
   }
 
   .WARNROW td:last-child {
-      border-right: 2px solid #aa6666;
+      border-right: 2px solid #FF8C00;
   }
 
 
