@@ -1,77 +1,163 @@
 
   #logtable {
     border-collapse:separate;
-    border-spacing: 0px 6px;
+    border-spacing: 0px 3px;
+    width: 98%;
+    margin: 0 0 0 10px;
    }
 
-   #logtable>td, tr {
-    margin-top: 100px;
+   #logtable td {
+        height: 40px;
    }
+
+    tr td:first-child {
+        -moz-border-radius-topleft: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+    }
+
+    tr td:last-child {
+        -moz-border-radius-topright: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+    }
 
   .levelcol {
     width: 100px;
+    text-align: center;
   }
 
   .timecol {
     width: 200px;
+    padding-left: 10px;
   }
 
-  .DEBUG {
-    background-color: #aaffaa;
-    text-align: center;
-  }
 
-  .DEBUGROW {
-    outline: 3px solid #aaffaa;
-  }
 
-  .INFO {
-    background-color: #bbbbbb;
-    text-align: center;
-  }
-
-  .INFOROW {
-    outline: 3px solid #bbbbbb;
-  }
-
+/* TRACE entry style */
   .TRACE {
     background-color: #aaaaff;
-    text-align: center;
-    border: 0px solid transparent;
   }
 
-  .TRACEROW {
-    outline: 3px solid #aaaaff;
+  .TRACEROW td {
+    border-top: 2px solid #7777dd;
+    border-bottom: 2px solid #7777dd;
   }
 
+  .TRACEROW td:first-child {
+      border-left: 2px solid #7777dd;
+      border-right: 2px solid #7777dd;
+  }
+
+  .TRACEROW td:last-child {
+      border-right: 2px solid #7777dd;
+  }
+
+
+/* DEBUG entry style */
+  .DEBUG {
+    background-color: #aaffaa;
+  }
+
+  .DEBUGROW td{
+    border-top: 2px solid #66aa66;
+    border-bottom: 2px solid #66aa66;
+  }
+
+  .DEBUGROW td:first-child {
+      border-left: 2px solid #66aa66;
+      border-right: 2px solid #66aa66;
+  }
+
+  .DEBUGROW td:last-child {
+      border-right: 2px solid #66aa66;
+  }
+
+
+/* INFO entry style */
+  .INFO {
+    background-color: #bbbbbb;
+  }
+
+  .INFOROW td{
+    border-top: 2px solid #999999;
+    border-bottom: 2px solid #999999;
+  }
+
+  .INFOROW td:first-child {
+      border-left: 2px solid #999999;
+      border-right: 2px solid #999999;
+  }
+
+  .INFOROW td:last-child {
+      border-right: 2px solid #999999;
+  }
+
+
+/* WARN entry style */
   .WARN {
-    background-color: #ffaaaa;
-    text-align: center;
+    background-color: #dd9999;
   }
 
-  .WARNROW {
-    outline: 3px solid #ffaaaa;
+  .WARNROW td {
+    border-top: 2px solid #aa6666;
+    border-bottom: 2px solid #aa6666;
   }
 
+  .WARNROW td:first-child {
+      border-left: 2px solid #aa6666;
+      border-right: 2px solid #aa6666;
+  }
+
+  .WARNROW td:last-child {
+      border-right: 2px solid #aa6666;
+  }
+
+
+/* ERROR entry style */
   .ERROR {
     background-color: #ff5555;
-    text-align: center;
   }
 
-  .ERRORROW {
-    outline: 3px solid #ff5555;
+  .ERRORROW td {
+    border-top: 2px solid #ff2222;
+    border-bottom: 2px solid #ff2222;
   }
 
+  .ERRORROW td:first-child {
+      border-left: 2px solid #ff2222;
+      border-right: 2px solid #ff2222;
+  }
+
+  .ERRORROW td:last-child {
+      border-right: 2px solid #ff2222;
+  }
+
+
+/* FATAL entry style */
   .FATAL {
     background-color: #111111;
     color: white;
-    text-align: center;
   }
 
-  .FATALROW {
-    outline: 3px solid #111111;
+  .FATALROW td {
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
   }
 
+  .FATALROW td:first-child {
+      border-left: 2px solid #000000;
+      border-right: 2px solid #000000;
+  }
+
+  .FATALROW td:last-child {
+      border-right: 2px solid #000000;
+  }
+
+
+/* Filtered classes */
   .filter {
     cursor: pointer;
   }
