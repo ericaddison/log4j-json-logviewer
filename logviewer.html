@@ -43,24 +43,19 @@
 
 <!-- with input that accepts one file -->
 <div id="fileinfodiv" class="alert alert-info">
-  <input id="the-file-input" type="file" style="margin: 5px 0 5px 10        px">
+  <input id="the-file-input" type="file" style="margin: 5px 0 5px 10px">
 </div>
 
 
 
-<table id="logtable">
-  <thead>
-    <tr>
-      <th class="levelcol">Level</th>
-      <th class="timecol">Time</th>
-      <th>Message</th>
-      <th>Class</th>
-      <th>Method</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+<div id="logcontainer" class="container-fluid">
+  <div class="row headerrow">
+    <div class="col-md-1 levelcol">Level</div>
+    <div class="col-md-2 timecol">Timestamp</div>
+    <div class="col-md-9 ">Message</div>
+  </div>
+
+</div>
 
 
 </body>

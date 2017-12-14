@@ -1,30 +1,73 @@
 
+// Add an object to an element with .append, recursively
+function addObjectToElem(obj, elem, level, prefix)
+{
+    prefix = (prefix == '') ? '' : (prefix + ".");
+
+    for (var key in obj) {
+        if (typeof obj[key] == "object" && obj[key] !== null)
+          addObjectToElem(obj[key], elem, level, key);
+        else { 
+
+	       elem.append($('<div>')
+	             .addClass('infocell')
+	    	     .addClass('w-100')
+	       )
+	       .append($('<div>')
+	    	   .addClass('infocell')
+                   .addClass(level)
+	    	   .addClass('col-md-1')
+		   .append("&nbsp;")
+	       )
+	       .append($('<div>')
+	    	   .addClass('infocell')
+	    	   .addClass('keycell')
+	    	   .addClass('col-md-2')
+		   .text(prefix + key)
+	       )
+	       .append($('<div>')
+	    	   .addClass('infocell')
+	    	   .addClass('col-md-auto')
+		   .text(obj[key])
+	       )
+	}
+    }
+}
+
+
 // Add a log item row to the table
 function addLogRow(logitem){
 
-    $("#logtable").find('tbody')
-        .append($('<tr>')
-            .addClass('logitem')
-            .addClass(logitem.level + 'ROW')
-            .append($('<td>')
-                .addClass('levelcol')
-                .addClass(logitem.level)
-                .text(logitem.level)
-            )
-            .append($('<td>')
-                .addClass('timecol')
-                .text((new Date(logitem.timeMillis)).toLocaleString())
-            )
-            .append($('<td>')
-                .text(logitem.message)
-            )
-            .append($('<td>')
-                .text(logitem.source.class)
-            )
-            .append($('<td>')
-                .text(logitem.source.method)
-            )
-        );
+    var bgcolor = 'white'
+
+    var newrow = $('<div>')
+                   .addClass('logitem')
+	           .addClass('row')
+                   .addClass(logitem.level + 'ROW')
+                   .append($('<div>')
+                      .addClass('col-md-1')
+                      .addClass('levelcol')
+                      .addClass('mainlogrow')
+                      .addClass(logitem.level)
+                      .text(logitem.level)
+                    )
+                   .append($('<div>')
+                      .addClass('col-md-2')
+                      .addClass('timecol')
+                      .addClass('mainlogrow')
+                      .text((new Date(logitem.timeMillis)).toLocaleString())
+                    )
+                   .append($('<div>')
+                      .addClass('col-md-9')
+                      .addClass('mainlogrow')
+                      .text(logitem.message)
+                    );
+
+    var infodiv = $('<div>').addClass('infodiv').toggle();
+    addObjectToElem(logitem, infodiv, logitem.level, '');
+    newrow.append(infodiv);
+
+    $("#logcontainer").append(newrow);
 
 }
 
@@ -58,7 +101,7 @@ $(document).ready( function(){
     $('#searchInput').bind("enterKey",function(e){
        console.log('searching for ' + $(this).val())
        var v = $(this).val()
-       var rows = $('#logtable').find('.logitem')
+       var rows = $('#logcontainer').find('.logitem')
        rows.addClass('nosearch')
        rows.filter(":contains('" + v + "')").removeClass('nosearch')
     });
@@ -94,6 +137,13 @@ $(document).ready( function(){
             for(i=0; i<data.length; i++){
                 addLogRow(data[i]);
             }
+
+            // add click behavior to rows
+	    $('.mainlogrow').click(function(){
+
+		$(this).parent().find('.infodiv').toggle()
+	    })
+
           }
 
           // when the file is read it triggers the onload event above.

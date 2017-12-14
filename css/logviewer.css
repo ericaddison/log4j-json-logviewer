@@ -1,161 +1,109 @@
 
-  #logtable {
-    border-collapse:separate;
-    border-spacing: 0px 3px;
-    width: 98%;
-    margin: 0 0 0 10px;
-   }
-
-   #logtable td {
-        height: 40px;
-        padding-left: 5px;
-        padding-right: 5px;
-   }
-
-    tr td:first-child {
-        -moz-border-radius-topleft: 8px;
-        -moz-border-radius-bottomleft: 8px;
-        -webkit-border-top-left-radius: 8px;
-        -webkit-border-bottom-left-radius: 8px;
-    }
-
-    tr td:last-child {
-        -moz-border-radius-topright: 8px;
-        -moz-border-radius-bottomright: 8px;
-        -webkit-border-top-right-radius: 8px;
-        -webkit-border-bottom-right-radius: 8px;
-    }
+  .logitem {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    margin: 5px 0px;
+  }
 
   .levelcol {
-    width: 100px;
+    -moz-border-top-left-radius: 7px;
+    -webkit-border-top-left-radius: 7px;
     text-align: center;
   }
 
   .timecol {
-    width: 200px;
     padding-left: 10px;
   }
 
+  .headerrow {
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .mainlogrow {
+    cursor: pointer;
+    height: 3em;
+    line-height: 3em;
+    vertical-align: middle;
+  }
+
+  .textspan {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .keycell {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+  }
 
 
 /* TRACE entry style */
   .TRACE {
     background-color: #aaaaff;
+    border-right: 2px solid #7777dd;
   }
 
-  .TRACEROW td {
-    border-top: 2px solid #7777dd;
-    border-bottom: 2px solid #7777dd;
-  }
-
-  .TRACEROW td:first-child {
-      border-left: 2px solid #7777dd;
-      border-right: 2px solid #7777dd;
-  }
-
-  .TRACEROW td:last-child {
-      border-right: 2px solid #7777dd;
+  .TRACEROW {
+    border: 2px solid #7777dd;
   }
 
 
 /* DEBUG entry style */
   .DEBUG {
     background-color: #aaffaa;
+    border-right: 2px solid #66aa66;
   }
 
-  .DEBUGROW td{
-    border-top: 2px solid #66aa66;
-    border-bottom: 2px solid #66aa66;
-  }
-
-  .DEBUGROW td:first-child {
-      border-left: 2px solid #66aa66;
-      border-right: 2px solid #66aa66;
-  }
-
-  .DEBUGROW td:last-child {
-      border-right: 2px solid #66aa66;
+  .DEBUGROW{
+    border: 2px solid #66aa66;
   }
 
 
 /* INFO entry style */
   .INFO {
     background-color: #bbbbbb;
+    border-right: 2px solid #999999;
   }
 
-  .INFOROW td{
-    border-top: 2px solid #999999;
-    border-bottom: 2px solid #999999;
-  }
-
-  .INFOROW td:first-child {
-      border-left: 2px solid #999999;
-      border-right: 2px solid #999999;
-  }
-
-  .INFOROW td:last-child {
-      border-right: 2px solid #999999;
+  .INFOROW {
+    border: 2px solid #999999;
   }
 
 
 /* WARN entry style */
   .WARN {
     background-color: #FFA500;
+    border-right: 2px solid #FF8C00;
   }
 
-  .WARNROW td {
-    border-top: 2px solid #FF8C00;
-    border-bottom: 2px solid #FF8C00;
-  }
-
-  .WARNROW td:first-child {
-      border-left: 2px solid #FF8C00;
-      border-right: 2px solid #FF8C00;
-  }
-
-  .WARNROW td:last-child {
-      border-right: 2px solid #FF8C00;
+  .WARNROW {
+    border: 2px solid #FF8C00;
   }
 
 
 /* ERROR entry style */
   .ERROR {
     background-color: #ff5555;
+    border-right: 2px solid #ff2222;
   }
 
-  .ERRORROW td {
-    border-top: 2px solid #ff2222;
-    border-bottom: 2px solid #ff2222;
-  }
-
-  .ERRORROW td:first-child {
-      border-left: 2px solid #ff2222;
-      border-right: 2px solid #ff2222;
-  }
-
-  .ERRORROW td:last-child {
-      border-right: 2px solid #ff2222;
+  .ERRORROW {
+    border: 2px solid #ff2222;
   }
 
 
 /* FATAL entry style */
   .FATAL {
     background-color: #111111;
+    border-right: 2px solid #000000;
     color: white;
   }
 
-  .FATALROW td {
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-  }
-
-  .FATALROW td:first-child {
-      border-left: 2px solid #000000;
-      border-right: 2px solid #000000;
-  }
-
-  .FATALROW td:last-child {
-      border-right: 2px solid #000000;
+  .FATALROW {
+    border: 2px solid #000000;
   }
 
 
